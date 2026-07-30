@@ -138,16 +138,16 @@
             min-height: 56px;
             min-width: 44px;
         }
+
         @media (max-width: 768px) {
-    .hero {
-        background-image: none;
-        /* Se quiser ajustar o espaçamento no mobile sem a imagem: */
+    .hero { 
+        background-image: none !important; /* O !important força a imagem a sumir */
         padding: 100px 0 60px; 
         min-height: auto; 
-        text-align: center;
+        text-align: center; 
     }
     
-    /* ... (restante do seu CSS mobile) ... */
+    /* ... restante do código do media query ... */
 }
 
         .btn:focus-visible {
