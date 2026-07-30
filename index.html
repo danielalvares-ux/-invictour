@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5RHMJBRK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Planeje sua próxima viagem com a Invictour. Atendimento personalizado, viagens nacionais e internacionais, cruzeiros, excursões e grupos VIPs.">
+    <meta name="theme-color" content="#001e3d">
+    <title>Invictour Travel | Sua próxima viagem começa aqui</title>
+
+    <meta property="og:title" content="Invictour Travel | Sua próxima viagem começa aqui">
+    <meta property="og:description" content="Atendimento personalizado para planejar sua viagem com segurança e tranquilidade.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/9Pv7x3x.png">
+    <meta property="og:url" content="https://invictour.com.br">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul-principal: #001e3d;
+            --azul-profundo: #00172f;
+            --azul-claro: #0a3155;
+            --dourado: #c89b3c;
+            --dourado-claro: #e7bd66;
+            --verde-whatsapp: #25d366;
+            --verde-hover: #1ebd5a;
+            --branco: #ffffff;
+            --off-white: #f7f3ec;
+            --texto-cinza: #5d6875;
+            --borda: rgba(255, 255, 255, 0.28);
+            --borda-escura: rgba(0, 30, 61, 0.1);
+            --font-main: 'Poppins', sans-serif;
+            --z-index-floating: 999;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--texto-cinza);
+            background-color: var(--branco);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* Utilidades e Animações */
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .text-gold { color: var(--dourado); }
+        .text-blue { color: var(--azul-principal); }
+        .text-white { color: var(--branco); }
+        
+        .section-padding { padding: 96px 0; }
+
+        .small-title {
+            color: var(--dourado);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 100ms; }
+        .delay-2 { transition-delay: 200ms; }
+        .delay-3 { transition-delay: 300ms; }
+        .delay-4 { transition-delay: 400ms; }
+        .delay-5 { transition-delay: 500ms; }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            min-height: 56px;
+            min-width: 44px;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--dourado);
+            outline-offset: 2px;
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .btn-primary {
+            background-color: var(--azul-principal);
+            color: var(--branco);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--azul-profundo);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 30, 61, 0.2);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--verde-whatsapp);
+            color: var(--branco);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--verde-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-gold {
+            background-color: var(--dourado);
+            color: var(--branco);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--dourado-claro);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(200, 155, 60, 0.3);
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--dourado);
+            color: var(--dourado);
+            background-color: transparent;
+        }
+
+        .btn-outline-gold:hover {
+            background-color: var(--dourado);
+            color: var(--branco);
+            transform: translateY(-2px);
+        }
+
+        /* Floating WhatsApp */
+        .floating-wpp {
+            position: fixed;
+            bottom: max(24px, env(safe-area-inset-bottom));
+            right: 24px;
+            width: 58px;
+            height: 58px;
+            background-color: var(--verde-whatsapp);
+            color: var(--branco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            z-index: var(--z-index-floating);
+            transition: all 0.3s ease;
+        }
+        .floating-wpp:hover {
+            transform: translateY(-4px);
+            background-color: var(--verde-hover);
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.3);
+        }
+        .floating-wpp svg { width: 32px; height: 32px; fill: currentColor; }
+
+        /* HERO - AGORA COM BACKGROUND IMAGE */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            background-image: url('https://i.imgur.com/9Pv7x3x.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            width: 48%;
+            padding-right: 4%;
+            max-width: 650px; /* Garante que o texto não fique largo demais se não tiver a imagem limitando na direita */
+        }
+
+        .hero-logo {
+            width: 140px;
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 4.5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--azul-principal);
+        }
+
+        .hero-title .text-gold {
+            display: block;
+        }
+
+        .hero-text {
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+            color: var(--texto-cinza);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--azul-principal);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .scroll-indicator svg {
+            width: 20px;
+            height: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(8px); }
+            60% { transform: translateY(4px); }
+        }
+
+        /* SEÇÃO INSTITUCIONAL */
+        .institucional {
+            padding: 0 24px 80px;
+            margin-top: 40px;
+        }
+
+        .institucional-panel {
+            background-color: var(--azul-principal);
+            border-radius: 48px;
+            padding: 80px 5%;
+            max-width: 1440px;
+            margin: 0 auto;
+            color: var(--branco);
+        }
+
+        .institucional-header {
+            max-width: 700px;
+            margin-bottom: 64px;
+        }
+
+        .institucional-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .institucional-text {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.125rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .features-grid .card:nth-child(4),
+        .features-grid .card:nth-child(5) {
+            grid-column: span 1;
+        }
+
+        .feature-card {
+            background-color: var(--azul-claro);
+            border: 1px solid var(--borda);
+            border-radius: 24px;
+            padding: 32px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--dourado-claro);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--dourado);
+        }
+        .feature-icon svg { width: 24px; height: 24px; fill: currentColor; }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--branco);
+        }
+
+        .feature-text {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CATEGORIAS */
+        .categorias {
+            padding: 40px 24px 96px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .categorias-wrapper {
+            display: flex;
+            gap: 24px;
+        }
+
+        .categoria-card {
+            position: relative;
+            flex: 1;
+            height: 420px;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 32px 24px;
+            text-decoration: none;
+            group: category;
+            isolation: isolate;
+        }
+
+        .categoria-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            transition: transform 0.6s ease;
+        }
+
+        .categoria-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,23,47,0.9) 0%, rgba(0,23,47,0) 60%);
+            z-index: -1;
+        }
+
+        .categoria-card:hover .categoria-img {
+            transform: scale(1.08);
+        }
+
+        .categoria-title {
+            color: var(--branco);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .categoria-btn {
+            width: 40px;
+            height: 40px;
+            background-color: var(--branco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--azul-principal);
+            transition: transform 0.3s ease;
+        }
+        .categoria-card:hover .categoria-btn {
+            transform: translateX(5px);
+        }
+        .categoria-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* COMO FUNCIONA */
+        .como-funciona {
+            background-color: var(--azul-principal);
+            background-image: radial-gradient(circle at 100% 0%, rgba(200, 155, 60, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+            color: var(--branco);
+            padding: 96px 0;
+            text-align: center;
+        }
+
+        .como-funciona-header {
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+
+        .como-funciona-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        .como-funciona-text {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.125rem;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .steps-line {
+            position: absolute;
+            top: 36px;
+            left: 16%;
+            right: 16%;
+            height: 1px;
+            background-color: var(--borda);
+            z-index: 1;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 1px solid var(--dourado);
+            background-color: var(--azul-principal);
+            color: var(--dourado);
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .step-text {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9375rem;
+            max-width: 280px;
+        }
+
+        /* CONFIANÇA */
+        .confianca {
+            background-color: var(--off-white);
+            padding: 96px 0;
+        }
+
+        .confianca-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .confianca-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--azul-principal);
+        }
+
+        .confianca-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .confianca-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--azul-principal);
+        }
+
+        .confianca-list-icon {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(200, 155, 60, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dourado);
+            flex-shrink: 0;
+        }
+        .confianca-list-icon svg { width: 16px; height: 16px; fill: currentColor; }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .depoimento-img {
+            width: 100%;
+            border-radius: 16px;
+            background-color: var(--branco);
+            border: 1px solid var(--borda-escura);
+            object-fit: contain;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .confianca-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 96px 0;
+            background-color: var(--branco);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .faq-title {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 800;
+            color: var(--azul-principal);
+            margin-bottom: 16px;
+        }
+
+        .faq-subtitle {
+            font-size: 1.125rem;
+            color: var(--texto-cinza);
+        }
+
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--borda-escura);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: rgba(0, 30, 61, 0.3);
+        }
+
+        .faq-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            background-color: transparent;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--azul-principal);
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--azul-principal);
+            transition: transform 0.3s ease;
+        }
+        .faq-icon svg { width: 16px; height: 16px; fill: currentColor; }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease;
+        }
+
+        .faq-item.active .faq-content {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-inner {
+            overflow: hidden;
+        }
+
+        .faq-body {
+            padding: 0 24px 24px;
+            color: var(--texto-cinza);
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            background-color: var(--azul-principal);
+            background-image: radial-gradient(circle at 50% 50%, rgba(200, 155, 60, 0.05) 0%, transparent 60%);
+            padding: 120px 0;
+            text-align: center;
+            color: var(--branco);
+        }
+
+        .cta-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 24px;
+            color: var(--dourado);
+        }
+        .cta-icon svg { width: 100%; height: 100%; fill: currentColor; }
+
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .cta-text {
+            font-size: 1.125rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--azul-profundo);
+            padding: 40px 0;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            filter: brightness(0) invert(1) opacity(0.8);
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover { color: var(--dourado); }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 1200px) {
+            .hero-title { font-size: 3rem; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .features-grid .card:nth-child(4) { grid-column: span 1; }
+            .features-grid .card:nth-child(5) { grid-column: span 2; }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content { width: 55%; }
+            .confianca-grid { grid-template-columns: 1fr; gap: 40px; }
+            .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 100px 0 60px; min-height: auto; text-align: center; }
+            .hero-container { flex-direction: column; }
+            .hero-content { width: 100%; padding-right: 0; margin-bottom: 40px; display: flex; flex-direction: column; align-items: center; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-buttons { justify-content: center; width: 100%; }
+            .hero-buttons .btn { width: 100%; }
+            .scroll-indicator { display: none; }
+
+            .institucional-panel { padding: 48px 24px; border-radius: 32px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .features-grid .card:nth-child(5) { grid-column: span 1; }
+
+            .categorias { padding-left: 0; padding-right: 0; }
+            .categorias-wrapper { overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 24px; gap: 16px; scrollbar-width: none; }
+            .categorias-wrapper::-webkit-scrollbar { display: none; }
+            .categoria-card { flex: 0 0 78%; scroll-snap-align: center; height: 380px; }
+
+            .steps-container { grid-template-columns: 1fr; gap: 48px; }
+            .steps-line { display: none; }
+            .step-item::after { content: ''; position: absolute; top: 72px; bottom: -48px; left: 50%; transform: translateX(-50%); width: 1px; background-color: var(--borda); z-index: -1; }
+            .step-item:last-child::after { display: none; }
+
+            .depoimentos-grid { grid-template-columns: 1fr; }
+            
+            .confianca-actions .btn { width: 100%; }
+
+            .cta-buttons .btn { width: 100%; }
+            
+            .footer-container { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2.125rem; }
+            .institucional-title { font-size: 1.75rem; }
+            .confianca-title { font-size: 1.75rem; }
+            .como-funciona-title { font-size: 1.75rem; }
+            .faq-title { font-size: 1.75rem; }
+            .cta-title { font-size: 2rem; }
+            .faq-btn { font-size: 1rem; padding: 20px 16px; }
+            .faq-body { padding: 0 16px 20px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <!-- Schema Markup FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como funciona o atendimento da Invictour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O atendimento é personalizado e feito por uma equipe preparada para entender o que você procura e orientar cada etapa da sua viagem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais destinos vocês ajudam a planejar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Invictour trabalha com destinos nacionais e internacionais, de acordo com sua preferência, período e objetivo de viagem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O atendimento é feito pelo WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Pelo WhatsApp, você recebe orientações, esclarece dúvidas e acompanha o planejamento da sua viagem de forma rápida e próxima."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É seguro planejar minha viagem com a Invictour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Invictour trabalha com informações claras, parceiros confiáveis e acompanhamento durante todo o processo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como posso começar a programar minha viagem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basta clicar no botão de WhatsApp e contar para a equipe qual destino ou experiência você deseja viver."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RHMJBRK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Link do WhatsApp parametrizado (mantido em variável JS/HTML) -->
+    <!-- const WHATSAPP_URL = "https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem."; -->
+
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <img src="https://i.imgur.com/OzGmCRe.png" alt="Invictour Travel" class="hero-logo animate-on-scroll">
+                
+                <h1 class="hero-title animate-on-scroll delay-1">
+                    O próximo embarque<br>
+                    pode ser o início da<br>
+                    <span class="text-gold">sua melhor viagem.</span>
+                </h1>
+                
+                <p class="hero-text animate-on-scroll delay-2">
+                    Seja para uma viagem em casal, em família, para a melhor idade ou em grupo, a Invictour oferece atendimento próximo, orientação clara e suporte direto pelo WhatsApp para ajudar você a planejar melhor sua próxima viagem.
+                </p>
+                
+                <div class="hero-buttons animate-on-scroll delay-3">
+                    <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Vamos realizar sua viagem? 
+                        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </a>
+                    <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                        Conte seu sonho no WhatsApp
+                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})">
+            EXPLORAR
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+    </section>
+
+    <section class="institucional" id="sobre">
+        <div class="institucional-panel">
+            <div class="institucional-header animate-on-scroll">
+                <span class="small-title">Por que escolher a Invictour?</span>
+                <h2 class="institucional-title">Mais do que vender viagens, a Invictour ajuda você a se programar melhor.</h2>
+                <p class="institucional-text">Com atendimento consultivo e foco no perfil de cada viajante, a Invictour Travel facilita a escolha do pacote e transforma a sua intenção de viajar em uma proposta mais clara, prática e atrativa.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card card animate-on-scroll delay-1">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </div>
+                    <h3 class="feature-title">Atendimento humanizado</h3>
+                    <p class="feature-text">Você fala com gente de verdade, que escuta, entende seu momento e indica o melhor caminho.</p>
+                </div>
+                
+                <div class="feature-card card animate-on-scroll delay-2">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </div>
+                    <h3 class="feature-title">Planejamento personalizado</h3>
+                    <p class="feature-text">Montamos sua viagem de acordo com seu perfil, preferências e objetivos.</p>
+                </div>
+
+                <div class="feature-card card animate-on-scroll delay-3">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </div>
+                    <h3 class="feature-title">Segurança na sua escolha</h3>
+                    <p class="feature-text">Orientações claras, informações confiáveis e parceiros selecionados com cuidado.</p>
+                </div>
+
+                <div class="feature-card card animate-on-scroll delay-4">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </div>
+                    <h3 class="feature-title">Experiência e credibilidade</h3>
+                    <p class="feature-text">Anos de atuação no turismo, com avaliações positivas e clientes satisfeitos em todo o Brasil.</p>
+                </div>
+
+                <div class="feature-card card animate-on-scroll delay-5">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                    </div>
+                    <h3 class="feature-title">Suporte próximo e ágil</h3>
+                    <p class="feature-text">Tire dúvidas, receba orientações e acompanhe tudo pelo WhatsApp, antes, durante e depois da viagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categorias">
+        <div class="categorias-wrapper">
+            
+            <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="categoria-card animate-on-scroll delay-1" aria-label="Planejar Aéreo Nacional no WhatsApp">
+                <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=600&auto=format&fit=crop" alt="Destino Aéreo Nacional - Rio de Janeiro" class="categoria-img" loading="lazy">
+                <div class="categoria-overlay"></div>
+                <h3 class="categoria-title">Aéreo<br>Nacional</h3>
+                <div class="categoria-btn">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="categoria-card animate-on-scroll delay-2" aria-label="Planejar Aéreo Internacional no WhatsApp">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=600&auto=format&fit=crop" alt="Destino Aéreo Internacional - Paris" class="categoria-img" loading="lazy">
+                <div class="categoria-overlay"></div>
+                <h3 class="categoria-title">Aéreo<br>Internacional</h3>
+                <div class="categoria-btn">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="categoria-card animate-on-scroll delay-3" aria-label="Planejar Excursões Rodoviárias no WhatsApp">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=600&auto=format&fit=crop" alt="Excursões Rodoviárias - Ônibus em viagem" class="categoria-img" loading="lazy">
+                <div class="categoria-overlay"></div>
+                <h3 class="categoria-title">Excursões<br>Rodoviárias</h3>
+                <div class="categoria-btn">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="categoria-card animate-on-scroll delay-4" aria-label="Planejar Cruzeiros no WhatsApp">
+                <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?q=80&w=600&auto=format&fit=crop" alt="Cruzeiros" class="categoria-img" loading="lazy">
+                <div class="categoria-overlay"></div>
+                <h3 class="categoria-title">Cruzeiros</h3>
+                <div class="categoria-btn">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="categoria-card animate-on-scroll delay-5" aria-label="Planejar Grupos VIPs no WhatsApp">
+                <img src="https://images.unsplash.com/photo-1540339832862-474599807374?q=80&w=600&auto=format&fit=crop" alt="Grupos VIPs - Experiência Premium" class="categoria-img" loading="lazy">
+                <div class="categoria-overlay"></div>
+                <h3 class="categoria-title">Grupos VIPs</h3>
+                <div class="categoria-btn">
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="como-funciona">
+        <div class="container">
+            <div class="como-funciona-header animate-on-scroll">
+                <span class="small-title">Passo a passo</span>
+                <h2 class="como-funciona-title">COMO FUNCIONA</h2>
+                <p class="como-funciona-text">Planejar sua viagem pode ser simples do começo ao fim. Com orientação desde o início, você evita imprevistos, tem mais segurança nas suas escolhas e aproveita cada momento com tranquilidade.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                
+                <div class="step-item animate-on-scroll delay-1">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Veja a viagem</h3>
+                    <p class="step-text">Explore destinos, inspire-se com ideias e encontre o estilo de viagem que tem a ver com você.</p>
+                </div>
+
+                <div class="step-item animate-on-scroll delay-2">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Mande mensagem no WhatsApp</h3>
+                    <p class="step-text">Fale com a nossa equipe, tire dúvidas e conte o que espera da sua viagem. Estamos prontos para ajudar.</p>
+                </div>
+
+                <div class="step-item animate-on-scroll delay-3">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Programe a sua viagem dos sonhos</h3>
+                    <p class="step-text">Receba orientações personalizadas e planeje cada detalhe para viver momentos inesquecíveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="confianca">
+        <div class="container">
+            <div class="confianca-grid">
+                <div class="confianca-left animate-on-scroll">
+                    <span class="small-title">Confiança</span>
+                    <h2 class="confianca-title">
+                        Confiança que<br>
+                        acompanha você<br>
+                        <span class="text-gold">DO INÍCIO AO FIM.</span>
+                    </h2>
+                </div>
+                
+                <div class="confianca-right animate-on-scroll delay-2">
+                    <ul class="confianca-list">
+                        <li>
+                            <div class="confianca-list-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                            </div>
+                            Informações confiáveis e atualizadas
+                        </li>
+                        <li>
+                            <div class="confianca-list-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                            </div>
+                            Privacidade e respeito com seus dados
+                        </li>
+                        <li>
+                            <div class="confianca-list-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                            </div>
+                            Acompanhamento antes, durante e depois da viagem
+                        </li>
+                        <li>
+                            <div class="confianca-list-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                            </div>
+                            Foco total na sua experiência
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="depoimentos-grid">
+                <img src="https://i.imgur.com/wXCKCkF.png" alt="Avaliação de cliente da Invictour" class="depoimento-img animate-on-scroll delay-1" loading="lazy">
+                <img src="https://i.imgur.com/9fYon3L.png" alt="Avaliação de cliente da Invictour" class="depoimento-img animate-on-scroll delay-2" loading="lazy">
+                <img src="https://i.imgur.com/kVNBXw9.png" alt="Avaliação de cliente da Invictour" class="depoimento-img animate-on-scroll delay-3" loading="lazy">
+            </div>
+
+            <div class="confianca-actions animate-on-scroll delay-4">
+                <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Realizar minha viagem dos sonhos
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </a>
+                <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    Começar a realizar pelo WhatsApp
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header animate-on-scroll">
+                <span class="small-title">Tire suas dúvidas</span>
+                <h2 class="faq-title">DÚVIDAS FREQUENTES</h2>
+                <p class="faq-subtitle">Tire suas dúvidas e siga para a sua próxima viagem com segurança.</p>
+            </div>
+
+            <div class="faq-container animate-on-scroll delay-2">
+                
+                <div class="faq-item">
+                    <button class="faq-btn" aria-expanded="false" aria-controls="faq1">
+                        <span>Como funciona o atendimento da Invictour?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                    </button>
+                    <div id="faq1" class="faq-content">
+                        <div class="faq-inner">
+                            <div class="faq-body">
+                                O atendimento é personalizado e feito por uma equipe preparada para entender o que você procura e orientar cada etapa da sua viagem.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" aria-expanded="false" aria-controls="faq2">
+                        <span>Quais destinos vocês ajudam a planejar?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                    </button>
+                    <div id="faq2" class="faq-content">
+                        <div class="faq-inner">
+                            <div class="faq-body">
+                                A Invictour trabalha com destinos nacionais e internacionais, de acordo com sua preferência, período e objetivo de viagem.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" aria-expanded="false" aria-controls="faq3">
+                        <span>O atendimento é feito pelo WhatsApp?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                    </button>
+                    <div id="faq3" class="faq-content">
+                        <div class="faq-inner">
+                            <div class="faq-body">
+                                Sim. Pelo WhatsApp, você recebe orientações, esclarece dúvidas e acompanha o planejamento da sua viagem de forma rápida e próxima.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" aria-expanded="false" aria-controls="faq4">
+                        <span>É seguro planejar minha viagem com a Invictour?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                    </button>
+                    <div id="faq4" class="faq-content">
+                        <div class="faq-inner">
+                            <div class="faq-body">
+                                Sim. A Invictour trabalha com informações claras, parceiros confiáveis e acompanhamento durante todo o processo.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-btn" aria-expanded="false" aria-controls="faq5">
+                        <span>Como posso começar a programar minha viagem?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </span>
+                    </button>
+                    <div id="faq5" class="faq-content">
+                        <div class="faq-inner">
+                            <div class="faq-body">
+                                Basta clicar no botão de WhatsApp e contar para a equipe qual destino ou experiência você deseja viver.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-icon animate-on-scroll">
+                <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            
+            <h2 class="cta-title animate-on-scroll delay-1">
+                SEU PRÓXIMO DESTINO<br>
+                <span class="text-gold">VAI COMEÇAR AGORA.</span>
+            </h2>
+            
+            <p class="cta-text animate-on-scroll delay-2">
+                Fale com a Invictour pelo WhatsApp e receba orientação personalizada para planejar sua viagem do seu jeito, com tranquilidade e segurança.
+            </p>
+            
+            <div class="cta-buttons animate-on-scroll delay-3">
+                <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                    VAMOS REALIZAR SUA VIAGEM?
+                </a>
+                <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold">
+                    QUERO EMBARCAR AGORA!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <img src="https://i.imgur.com/OzGmCRe.png" alt="Invictour Travel" class="footer-logo">
+            <p>© 2026 Invictour Travel. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." target="_blank" rel="noopener noreferrer">Atendimento personalizado para sua próxima viagem.</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante -->
+    <a href="https://wa.me/5514982300144?text=Ol%C3%A1%21%20Conheci%20a%20Invictour%20pelo%20site%20e%20gostaria%20de%20come%C3%A7ar%20a%20planejar%20minha%20viagem." class="floating-wpp" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Invictour pelo WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.88-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animação no Scroll (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+
+            // Accordion FAQ
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqItem = button.parentElement;
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    
+                    // Fechar todos os outros
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                        item.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+                    });
+
+                    // Se não estava aberto, abrir o atual
+                    if (!isExpanded) {
+                        faqItem.classList.add('active');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
